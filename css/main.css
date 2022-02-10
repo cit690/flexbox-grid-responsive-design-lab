@@ -32,6 +32,7 @@ body {
 
 main{
   display: flex;
+
   background-color: #ffffff;
   align-items: center;
   justify-content: center;
@@ -42,13 +43,15 @@ main{
 
 
 #status {
+  display: flex;
 margin-left: auto;
-padding: 5px
+padding: 5px;
 }
 
 img{
   border-radius: 50%;
-  width: 50px;
+  border: 1px solid #65d289;
+  width: 50%;
   justify-content: center;
 }
 
@@ -57,7 +60,7 @@ img{
 }
 
 #occupation{
-
+background-color: #f3f3f3;
 }
 
 #brand {
@@ -66,7 +69,7 @@ background-color: #f3f3f3;
 }
 
 #offer{
-
+padding: 20px 0;
 }
 
 #contact{
@@ -76,12 +79,21 @@ width: 100%;
 
 }
 
-#contact p{
-  text-align: center;
-  background-color: #5cbd7b;
+#contact > p{
   width: 50%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  
 }
+
+#contact > p:first-child{
+  background-color: #5cbd7b;
+}
+ #contact >p:last-child{
+   background-color: #5cbd7b;
+ }
 
 @media only screen and (min-width: 600px) {
   main{
@@ -103,14 +115,25 @@ width: 100%;
     text-align: left;
    
   }
+  #occupation{
+    width: 100%;
+  }
 
   img {
    grid-area: img;
    width: 75px;
    margin: 0 auto;
   }
-
+  #brand{
+    display: flex;
+    grid: flex;
+    border-left: 2px solid green;
+  }
   #contact{
     grid-area: contact;
   }
+
+  #name, #occupation, #brand, #offer {
+    padding-left: 20px;
+    background-color: #f3f3f3;
 }
